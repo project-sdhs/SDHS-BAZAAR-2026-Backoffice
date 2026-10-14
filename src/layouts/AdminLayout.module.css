@@ -1,0 +1,77 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    'header header'
+    'sidebar content';
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0 var(--space-24);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-canvas);
+}
+
+.brand {
+  font: var(--font-body);
+  font-weight: 700;
+  color: var(--color-foreground);
+}
+
+.badge {
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-6);
+  background: var(--color-weak-background);
+  color: var(--color-weak-foreground);
+  font: var(--font-body-small);
+  font-weight: 600;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: var(--space-16);
+  border-right: 1px solid var(--color-border);
+  background: var(--color-canvas);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  display: block;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-8);
+  color: var(--color-body);
+  font: var(--font-body);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  background: var(--color-surface);
+  color: var(--color-foreground);
+}
+
+/* 지금 보고 있는 메뉴 (NavLink 가 aria-current="page" 를 자동으로 붙여요) */
+.navLink[aria-current='page'] {
+  background: var(--color-weak-background);
+  color: var(--color-weak-foreground);
+  font-weight: 600;
+}
+
+.content {
+  grid-area: content;
+  padding: var(--space-32);
+  background: var(--color-canvas);
+}
