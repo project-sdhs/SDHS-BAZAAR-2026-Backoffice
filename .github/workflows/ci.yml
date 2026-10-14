@@ -8,9 +8,10 @@ on:
 permissions:
   contents: read
 
+# 같은 PR 에 새 커밋이 올라오면 이전 실행은 취소해요. main push 는 끝까지 돌려요.
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   check:
@@ -19,9 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 22.x 중 최신 버전을 받아요 (jsdom 등이 22.22.2 이상을 요구 — package.json engines 참고)
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '22'
+          check-latest: true
           cache: npm
 
       - name: Install
