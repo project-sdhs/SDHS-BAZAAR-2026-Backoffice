@@ -1,0 +1,47 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-24);
+  background: var(--color-surface);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-32);
+  border-radius: var(--radius-16);
+  background: var(--color-canvas);
+}
+
+.title {
+  font: var(--font-h3);
+  letter-spacing: var(--letter-spacing-title);
+}
+
+.description {
+  color: var(--color-body);
+}
+
+.tempLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-top: var(--space-16);
+  border-radius: var(--radius-14);
+  background: var(--color-weak-background);
+  color: var(--color-weak-foreground);
+  font: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tempLink:hover {
+  color: var(--color-weak-foreground);
+  background: var(--color-tile-tint);
+}

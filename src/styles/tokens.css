@@ -1,0 +1,61 @@
+/*
+ * 디자인 토큰 — Toss Design System 기반, Primary 만 디지텍 컬러(#0171CE).
+ * 색·간격·라디우스·글자는 여기 있는 변수만 써요. 예) color: var(--color-primary);
+ * 그림자는 쓰지 않아요: canvas(흰색) 위에 surface 를 깔고, 경계가 필요하면 1px border 한 줄.
+ */
+:root {
+  /* ---------- Color · Brand ---------- */
+  --color-primary: #0171ce;
+  --color-primary-pressed: #015ca8;
+  --color-weak-background: #edf5fc;
+  --color-weak-foreground: #01477f;
+  --color-tile-tint: #d4e7f7;
+  --color-on-primary: #ffffff;
+
+  /* ---------- Color · Neutral ---------- */
+  --color-foreground: #191f28; /* 제목·본문 진한 글자 */
+  --color-body: #4e5968; /* 설명 글자 */
+  --color-muted: #8b95a1; /* 흐린 글자·비활성 */
+  --color-border: #e5e8eb;
+  --color-surface: #f2f4f6; /* 카드·영역 배경 */
+  --color-canvas: #ffffff; /* 페이지 배경 */
+  --color-placeholder: #e9ecf0; /* 이미지 자리 */
+
+  /* ---------- Color · State ---------- */
+  --color-danger: #e42939;
+  --color-danger-weak: #fdecee;
+  --color-focus-ring: #a9cfef;
+
+  /* ---------- Radius ---------- */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-14: 14px;
+  --radius-16: 16px;
+
+  /* ---------- Spacing ---------- */
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* ---------- Typography (Pretendard) ---------- */
+  --font-family:
+    'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    system-ui, sans-serif;
+
+  /* font 단축 속성: 굵기 크기/줄높이 글꼴 — 사용 예) font: var(--font-h1); */
+  --font-h1: 700 36px / 54px var(--font-family);
+  --font-h2: 600 30px / 45px var(--font-family);
+  --font-h3: 600 24px / 36px var(--font-family);
+  --font-h4: 600 22px / 33px var(--font-family);
+  --font-body: 400 16px / 24px var(--font-family);
+  --font-body-small: 400 14px / 21px var(--font-family);
+
+  /* 자간: h1~h3 은 title, h4 는 h4 */
+  --letter-spacing-title: -0.02em;
+  --letter-spacing-h4: -0.01em;
+}

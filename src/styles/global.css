@@ -1,0 +1,74 @@
+/*
+ * 전역 기본 스타일 (모든 화면에 적용).
+ * 화면·컴포넌트별 스타일은 파일 옆 XxxPage.module.css 에 써요.
+ * Pretendard 글꼴은 index.html 에서 jsDelivr CDN 으로 불러옵니다.
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font: var(--font-body);
+  color: var(--color-foreground);
+  background: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font: var(--font-h1);
+  letter-spacing: var(--letter-spacing-title);
+}
+
+h2 {
+  font: var(--font-h2);
+  letter-spacing: var(--letter-spacing-title);
+}
+
+h3 {
+  font: var(--font-h3);
+  letter-spacing: var(--letter-spacing-title);
+}
+
+h4 {
+  font: var(--font-h4);
+  letter-spacing: var(--letter-spacing-h4);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-pressed);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* 키보드로 이동할 때 보이는 포커스 링: 3px, 2px 띄움 */
+:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
