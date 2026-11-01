@@ -1,0 +1,91 @@
+.dialog {
+  width: min(400px, calc(100% - var(--space-32)));
+  max-height: calc(100% - var(--space-32));
+  padding: var(--space-24);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-16);
+  background: var(--color-canvas);
+  color: var(--color-foreground);
+  overflow-wrap: anywhere;
+}
+
+.dialog[open] {
+  display: grid;
+  gap: var(--space-16);
+}
+
+.dialog::backdrop {
+  background: var(--color-foreground);
+  opacity: 0.4;
+}
+
+.title {
+  font: var(--font-h4);
+}
+
+.description {
+  color: var(--color-body);
+  font: var(--font-body);
+  white-space: pre-line;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.cancel,
+.confirm {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: var(--space-8) var(--space-16);
+  border: 0;
+  border-radius: var(--radius-14);
+  font: var(--font-control);
+  cursor: pointer;
+}
+
+.cancel {
+  background: var(--color-surface);
+  color: var(--color-body);
+}
+
+.cancel:hover:not(:disabled) {
+  background: var(--color-border);
+}
+
+.confirm {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.confirm:hover:not(:disabled) {
+  background: var(--color-primary-pressed);
+}
+
+.danger,
+.danger:hover:not(:disabled) {
+  background: var(--color-danger-weak);
+  color: var(--color-danger);
+}
+
+.cancel:disabled,
+.confirm:disabled {
+  background: var(--color-surface);
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}

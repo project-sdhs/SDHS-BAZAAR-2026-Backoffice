@@ -54,6 +54,7 @@
   --font-h4: 600 22px / 33px var(--font-family);
   --font-body: 400 16px / 24px var(--font-family);
   --font-body-small: 400 14px / 21px var(--font-family);
+  --font-control: 600 14px / 21px var(--font-family);
 
   /* 자간: h1~h3 은 title, h4 는 h4 */
   --letter-spacing-title: -0.02em;

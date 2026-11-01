@@ -1,0 +1,60 @@
+.wrapper {
+  position: fixed;
+  bottom: var(--space-32);
+  left: 50%;
+  z-index: 1000;
+  width: max-content;
+  max-width: calc(100% - var(--space-32));
+  transform: translateX(-50%);
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-16);
+  border-radius: var(--radius-14);
+  background: var(--color-foreground);
+  color: var(--color-on-primary);
+  font: var(--font-body-small);
+}
+
+.error {
+  background: var(--color-danger-weak);
+  color: var(--color-danger);
+}
+
+.icon,
+.closeIcon {
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask: url('./icons/check_circle.svg') center / contain no-repeat;
+}
+
+.error .icon {
+  mask-image: url('./icons/error.svg');
+}
+
+.closeIcon {
+  mask-image: url('./icons/close.svg');
+}
+
+.message {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  padding: var(--space-4);
+  border: 0;
+  border-radius: var(--radius-6);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
