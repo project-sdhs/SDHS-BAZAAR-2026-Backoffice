@@ -1,0 +1,25 @@
+.chip {
+  padding: var(--space-8) var(--space-16);
+  border: 1px solid transparent;
+  border-radius: var(--radius-10);
+  background: var(--color-surface);
+  color: var(--color-body);
+  font: var(--font-control);
+  cursor: pointer;
+}
+
+.chip:hover:not(:disabled) {
+  background: var(--color-border);
+}
+
+.selected,
+.selected:hover:not(:disabled) {
+  background: var(--color-foreground);
+  color: var(--color-on-primary);
+}
+
+.chip:disabled {
+  color: var(--color-muted);
+  background: var(--color-surface);
+  cursor: not-allowed;
+}
